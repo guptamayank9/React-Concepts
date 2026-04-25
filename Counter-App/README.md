@@ -1,16 +1,177 @@
-# React + Vite
+# 🧮 Counter App (React + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Counter App built using **React (Vite)** and **Tailwind CSS**.
+This project demonstrates basic React concepts like state management, event handling, and UI styling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* ➕ Increase count
+* ➖ Decrease count
+* 🔄 Reset count
+* 🎨 Clean UI using Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React (Vite)
+* Tailwind CSS
+* JavaScript (ES6)
+
+---
+
+## ⚙️ Tailwind CSS Setup (Vite)
+
+Follow these steps to install Tailwind in a Vite React project:
+
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
+
+### Configure Vite
+
+Update your `vite.config.js`:
+
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+```
+
+### Add Tailwind to CSS
+
+In `src/index.css`:
+
+```css
+@import "tailwindcss";
+```
+
+---
+
+## 📸 Preview
+
+(Add your project screenshot here)
+
+---
+
+## ⚙️ Installation & Run
+
+```bash
+git clone https://github.com/your-username/counter-app.git
+cd counter-app
+npm install
+npm run dev
+```
+
+---
+
+## 🧠 How It Works
+
+### 🔹 State Management
+
+```js
+const [count, setCount] = useState(0);
+```
+
+* `count` → current value
+* `setCount` → function to update value
+
+---
+
+### 🔹 Increase Function
+
+```js
+const handleIncrease = () => {
+  setCount(prev => prev + 1);
+}
+```
+
+👉 When button is clicked:
+
+1. Function runs
+2. `setCount` updates value
+3. React re-renders UI
+
+---
+
+### 🔹 Decrease Function
+
+```js
+onClick={() => setCount(count - 1)}
+```
+
+👉 Decreases the value by 1
+
+---
+
+### 🔹 Reset Function
+
+```js
+onClick={() => setCount(0)}
+```
+
+👉 Resets value to 0
+
+---
+
+### 🔹 UI Styling (Tailwind)
+
+Example:
+
+```html
+className="bg-blue-500 text-white px-4 py-2 rounded"
+```
+
+* `bg-blue-500` → background color
+* `text-white` → text color
+* `px-4 py-2` → padding
+* `rounded` → border radius
+
+---
+
+## 📂 Project Structure
+
+```
+counter-app/
+│── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│── package.json
+```
+
+---
+
+## 🧠 What I Learned
+
+* React useState hook
+* Event handling
+* Functional components
+* Tailwind CSS basics
+* UI layout and styling
+
+---
+
+## 🔮 Future Improvements
+
+* Add step counter (+5, -5)
+* Add min/max limit
+* Add dark mode
+
+---
+
+## 👨‍💻 Author
+
+**Mayank Gupta**
+
+---
+
+## ⭐ Give a Star
+
+If you like this project, give it a ⭐ on GitHub!
