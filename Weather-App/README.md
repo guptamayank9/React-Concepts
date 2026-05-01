@@ -1,16 +1,145 @@
-# React + Vite
+# 🌦️ Weather App (React + API)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **Weather App** built using **React**.
+It fetches real-time weather data using an external API and displays it in a clean UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 🚀 Features
 
-## React Compiler
+* 🔍 Search weather by city
+* 🌡️ Display temperature
+* ☁️ Show weather condition
+* ⏳ Loading indicator
+* ❌ Error handling (invalid city)
+* ⚡ Fast UI updates
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React (Vite)
+* JavaScript (ES6)
+* Tailwind CSS
+* Weather API
+
+---
+
+# ⚙️ Installation & Setup
+
+```bash id="qj8bq3"
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+npm install
+npm run dev
+```
+
+---
+
+# 🌐 API Used
+
+Weather data is fetched from:
+
+```id="p8dczx"
+https://api.weatherapi.com/v1/current.json
+```
+
+---
+
+# 🧠 How It Works
+
+## 🔹 State Management
+
+```js id="u6gm90"
+const [city, setCity] = useState("");
+const [weather, setWeather] = useState(null);
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState("");
+```
+
+---
+
+## 🔹 Fetch Weather Data
+
+```js id="bsv9qp"
+const getWeather = async () => {
+  setLoading(true);
+  setError("");
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (data.error) {
+    setError(data.error.message);
+  } else {
+    setWeather(data);
+  }
+
+  setLoading(false);
+};
+```
+
+---
+
+## 🔹 Display Data
+
+```jsx id="pg1lg1"
+{weather && (
+  <div>
+    <h2>{weather.location.name}</h2>
+    <p>{weather.current.temp_c} °C</p>
+    <p>{weather.current.condition.text}</p>
+  </div>
+)}
+```
+
+---
+
+# 🔄 App Flow
+
+1. User enters city
+2. Clicks "Get Weather"
+3. API call is made
+4. Data stored in state
+5. UI updates dynamically
+
+---
+
+# 📚 Concepts Used
+
+* useState
+* async/await
+* API fetching
+* Conditional rendering
+* Error handling
+* Tailwind CSS
+
+---
+
+# 🧠 What I Learned
+
+* Working with APIs
+* Handling async operations
+* Managing UI states
+* Building real-world apps
+
+---
+
+# 🔮 Future Improvements
+
+* Add weather icons 🌤️
+* Add background change (rain/sunny)
+* Add search history
+* Add forecast feature
+
+---
+
+# 👨‍💻 Author
+
+Mayank Gupta
+
+---
+
+# ⭐ Notes
+
+This project is built for learning API integration and real-world React concepts.

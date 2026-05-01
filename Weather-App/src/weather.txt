@@ -1,0 +1,61 @@
+WEATHER APP (React + API) NOTES
+
+1. useState
+
+* city → user input store karta hai
+* weather → API data store karta hai
+* loading → loading state show karta hai
+* error → error message store karta hai
+
+2. Input Handling
+
+* onChange se user input state me save hota hai
+* value={city} se controlled input banta hai
+
+3. API Fetch (async/await)
+
+* fetch() se API call hoti hai
+* await se response milta hai
+* data JSON me convert hota hai
+
+4. try-catch
+
+* API fail hone par error handle karta hai
+
+5. Loading State
+
+* API call start → loading true
+* API complete → loading false
+* UI me "Loading..." show hota hai
+
+6. Error Handling
+
+* agar city galat hai → error message show
+* data.error check karte hain
+
+7. Conditional Rendering
+
+* {loading && ...}
+* {error && ...}
+* {weather && ...}
+
+8. API Data Structure (weatherapi.com)
+
+* weather.location.name → city name
+* weather.current.temp_c → temperature
+* weather.current.condition.text → weather condition
+
+9. Flow
+
+* user city enter kare
+* button click kare
+* API call ho
+* data aaye
+* UI update ho
+
+Learning:
+
+* API integration
+* async/await
+* error handling
+* real-world app logic
