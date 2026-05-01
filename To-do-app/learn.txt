@@ -1,0 +1,55 @@
+TODO APP WITH LOCAL STORAGE (React Notes)
+
+1. useState
+
+* State use hota hai data store karne ke liye
+* Example:
+  const [todos, setTodos] = useState([])
+
+2. Input Handling
+
+* User jo type karta hai wo state me save hota hai
+* onChange event use hota hai
+
+3. Add Todo
+
+* New array banate hain
+* Spread operator use karte hain
+  [...todos, input]
+
+4. Delete Todo
+
+* filter() method use hota hai
+* index match karke remove karte hain
+
+5. LocalStorage
+
+* Data browser me store hota hai
+
+* Save:
+  localStorage.setItem("todos", JSON.stringify(todos))
+
+* Load:
+  JSON.parse(localStorage.getItem("todos"))
+
+6. useEffect
+
+* Page load hone par data load karta hai
+* Example:
+  useEffect(() => {
+  const data = JSON.parse(localStorage.getItem("todos"))
+  if(data) setTodos(data)
+  }, [])
+
+7. Flow
+
+* Input → Add → State update → UI update
+* Refresh → LocalStorage → State restore
+
+Learning:
+
+* useState
+* useEffect
+* array methods (map, filter)
+* localStorage
+* real app behavior
