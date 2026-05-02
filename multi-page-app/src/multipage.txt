@@ -1,0 +1,58 @@
+MULTI PAGE APP (REACT ROUTER) NOTES
+
+1. React Router
+
+* React me multiple pages banane ke liye use hota hai
+* Without page reload navigation hota hai
+
+2. BrowserRouter
+
+* App ko wrap karta hai
+* Routing enable karta hai
+
+3. Routes & Route
+
+* Routes → container hota hai
+* Route → path define karta hai
+
+Example:
+<Route path="/" element={<Home />} />
+
+4. Link
+
+* Page change karne ke liye use hota hai
+* Reload nahi hota
+
+5. NavLink
+
+* Active page highlight karne ke liye use hota hai
+
+6. Pages
+
+* Home
+* About
+* Weather
+
+7. Component Structure
+
+* Navbar alag component
+* Pages alag folder me
+
+8. 404 Page
+
+* Agar route match nahi kare → NotFound page show hota hai
+
+<Route path="*" element={<NotFound />} />
+
+9. Flow
+
+* User link click karta hai
+* URL change hota hai
+* React Router component render karta hai
+
+Learning:
+
+* Routing
+* Navigation
+* Component structure
+* Multi-page app
