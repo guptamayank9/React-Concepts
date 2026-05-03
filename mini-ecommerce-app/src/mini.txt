@@ -1,0 +1,70 @@
+MINI E-COMMERCE APP (React) NOTES
+
+1. useState
+
+* cart state banaya items store karne ke liye
+
+2. Product Data
+
+* array of objects use kiya
+* fields: id, name, price, category, image
+
+3. ProductCard Component
+
+* reusable component banaya
+* props se data pass kiya
+* addToCart function call kiya
+
+4. Home Page
+
+* products display kiye using map()
+* filter system banaya (all, men, women)
+* useState(filter) use kiya
+
+5. Filtering Logic
+
+* filter === "all" → show all
+* warna category match karke filter()
+
+6. Routing
+
+* react-router-dom use kiya
+* Home page and Cart page banaye
+
+7. Cart System
+
+* addToCart → product add karta hai
+* removeFromCart → product remove karta hai
+
+8. LocalStorage
+
+* data save kiya browser me
+* refresh ke baad data retain hota hai
+
+useEffect:
+
+* first → load data
+* second → save data
+
+9. UI Styling
+
+* Tailwind CSS use kiya
+* grid layout use kiya
+* image fix kiya (w-full h-40 object-cover)
+
+10. Flow
+
+* user product dekhta hai
+* add to cart karta hai
+* cart page me items show hote hain
+* remove bhi kar sakta hai
+
+Learning:
+
+* React basics
+* state management
+* props passing
+* filtering
+* routing
+* localStorage
+* component structure
