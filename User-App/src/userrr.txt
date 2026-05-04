@@ -1,0 +1,61 @@
+USER PROFILE APP (React) NOTES
+
+1. Project Overview
+
+* Simple React app banaya
+* Users list show ki
+* Profile page banaya
+
+2. Data (users.js)
+
+* Array of objects use kiya
+* Fields: id, name, age, city
+
+3. Props Concept
+
+* Parent component se child component ko data pass kiya
+
+* Example: <UserCard user={user} />
+
+* Child me use kiya:
+  props.user.name
+
+4. UserCard Component
+
+* Reusable component banaya
+* Har user ke liye same structure use kiya
+
+5. Routing
+
+* react-router-dom use kiya
+* Multiple pages banaye
+
+6. Dynamic Routing
+
+* URL me id pass kiya:
+  /profile/1
+
+7. useParams Hook
+
+* URL se id nikala
+* us id se correct user find kiya
+
+8. Profile Page
+
+* User details show ki:
+  name, age, city
+
+9. Flow
+
+* Home page → users list
+* button click → profile page open
+* correct user data show
+
+Learning:
+
+* Props (data passing)
+* Component reuse
+* Routing
+* Dynamic URL
+* useParams
+* Basic app structure

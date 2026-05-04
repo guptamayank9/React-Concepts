@@ -1,16 +1,133 @@
-# React + Vite
+# 👤 User Profile App (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **User Profile Application** built using **React**.
+This project demonstrates how to use **props**, **routing**, and **dynamic URL parameters**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 🚀 Features
 
-## React Compiler
+* 🏠 Home Page (list of users)
+* 👤 Profile Page (user details)
+* 🔗 Navigation using React Router
+* 📦 Props for data passing
+* 🔄 Dynamic routing using URL parameters
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React (Vite)
+* JavaScript (ES6)
+* React Router DOM
+* Tailwind CSS (optional)
+
+---
+
+# ⚙️ Installation & Setup
+
+```bash id="run1"
+git clone https://github.com/your-username/user-profile-app.git
+cd user-profile-app
+npm install
+npm run dev
+```
+
+---
+
+# 🧠 How It Works
+
+## 🔹 Data (users.js)
+
+```js id="run2"
+const users = [
+  { id: 1, name: "Mayank", age: 21, city: "Delhi" },
+];
+```
+
+---
+
+## 🔹 Props Example
+
+```jsx id="run3"
+<UserCard user={user} />
+```
+
+👉 Data parent → child pass hota hai
+
+---
+
+## 🔹 Routing Setup
+
+```jsx id="run4"
+<Route path="/" element={<Home />} />
+<Route path="/profile/:id" element={<Profile />} />
+```
+
+---
+
+## 🔹 useParams
+
+```jsx id="run5"
+const { id } = useParams();
+```
+
+👉 URL se id nikalta hai
+
+---
+
+## 🔹 Find User
+
+```jsx id="run6"
+const user = users.find((u) => u.id === Number(id));
+```
+
+---
+
+# 🔄 App Flow
+
+1. Home page pe users list show hoti hai
+2. "View Profile" button click
+3. URL change hota hai (`/profile/:id`)
+4. Profile page me correct user data show hota hai
+
+---
+
+# 📚 Concepts Used
+
+* Props
+* Component reuse
+* React Router
+* Dynamic routing
+* useParams
+
+---
+
+# 🧠 What I Learned
+
+* Data passing using props
+* Building reusable components
+* Creating multi-page React apps
+* Handling dynamic routes
+* Structuring React projects
+
+---
+
+# 🔮 Future Improvements
+
+* Add edit profile feature
+* Add search functionality
+* Improve UI design
+* Add API integration
+
+---
+
+# 👨‍💻 Author
+
+Mayank Gupta
+
+---
+
+# ⭐ Notes
+
+This project is built for learning props and routing in React.
