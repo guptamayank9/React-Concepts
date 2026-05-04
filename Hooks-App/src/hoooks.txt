@@ -1,0 +1,52 @@
+REACT HOOKS PROJECT (ALL IN ONE) NOTES
+
+1. useState
+
+* State manage karne ke liye use kiya
+* Example:
+  const [count, setCount] = useState(0)
+* Button click se value update ki
+
+2. useEffect
+
+* Side effects handle karne ke liye
+* Page load hone par run hota hai
+
+useEffect(() => {
+console.log("component loaded")
+}, [])
+
+3. useRef
+
+* Direct DOM access ke liye use kiya
+* Input field ko focus karne ke liye
+
+const inputRef = useRef()
+
+inputRef.current.focus()
+
+4. useContext
+
+* Global data share karne ke liye
+* Props drilling avoid karta hai
+
+<UserContext.Provider value={{ name: "Mayank" }}> <Child />
+</UserContext.Provider>
+
+Child component me:
+const user = useContext(UserContext)
+
+5. Flow
+
+* Counter increase hota hai (useState)
+* Page load pe console log (useEffect)
+* Button click pe input focus (useRef)
+* Context se user name display (useContext)
+
+Learning:
+
+* React hooks ka real use
+* State handling
+* DOM manipulation
+* Global state sharing
+* Clean component structure
